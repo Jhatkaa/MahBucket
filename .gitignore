@@ -32,3 +32,5 @@
 # Or test cruft
 /public/system
 /coverage
+
+/config/master.key
