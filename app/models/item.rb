@@ -2,12 +2,12 @@ class Item < ApplicationRecord
   # has_attached_file :avatar, styles: { medium: '300x300>', thumb: '100x100>' }, default_url: '/images/:style/missing.png'
   has_attached_file :file, styles: lambda { |attachment|
     if attachment.instance.image?
-      { display: '800x800>',
-        webp: { format: :webp },
-        small: '400x400>',
-        thumbnail: '100x100>',
+      { webp: { format: :webp },
+        display: '800x800>',
         display_webp: ['800x800>', :webp],
+        small: '400x400>',
         small_webp: ['400x400>', :webp],
+        thumbnail: '100x100>',
         thumbnail_webp: ['100x100>', :webp] }
     else
       {}
