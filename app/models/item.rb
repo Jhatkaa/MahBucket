@@ -3,6 +3,7 @@ class Item < ApplicationRecord
   has_attached_file :file, styles: lambda { |attachment|
     if attachment.instance.image?
       { display: '800x800>',
+        webp: { format: :webp },
         small: '400x400>',
         thumbnail: '100x100>',
         display_webp: ['800x800>', :webp],
