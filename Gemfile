@@ -26,8 +26,8 @@ source 'https://rubygems.org' do
   # gem 'bcrypt', '~> 3.1.7'
 
   # Authenticate via Google OAuth
-  gem 'omniauth', '~> 2.0'
-  gem 'omniauth-google-oauth2'
+  gem 'omniauth-oauth2', '~> 1.6'
+  gem 'omniauth-google-oauth2','~> 0.6.1'
   gem 'repost'
 
   # Store files on Amazon S3
@@ -82,3 +82,7 @@ source 'https://rubygems.org' do
     gem 'webdrivers', '~> 4.4'
   end
 end
+
+gem "foreman", "~> 0.87.2"
+
+gem "omniauth-rails_csrf_protection", "~> 1.0"
